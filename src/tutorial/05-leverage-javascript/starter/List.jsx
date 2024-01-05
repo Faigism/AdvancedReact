@@ -1,0 +1,19 @@
+import { Person } from './Person'
+import { people } from '../../../data'
+
+const List = () => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      {people.map((person) => {
+        return <Person key={person.id} {...person} />
+      })}
+    </div>
+  )
+}
+export default List
